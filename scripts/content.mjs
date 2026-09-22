@@ -2,7 +2,7 @@
 // (lib/engine/fruit_spec.dart, lib/engine/blessing.dart) — keep them in sync.
 
 export const site = {
-  url: 'https://luongnv89.github.io/dropfruites',
+  url: 'https://luongnv.com/dropfruites',
   basePath: '/dropfruites/',
   repo: 'https://github.com/luongnv89/dropfruites',
   issues: 'https://github.com/luongnv89/dropfruites/issues',

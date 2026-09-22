@@ -7,7 +7,7 @@ This is the public home of **Fruit Drop**, a physics merge game for iPhone with 
 [**Report a bug →**](https://github.com/luongnv89/dropfruites/issues/new?template=bug_report.yml) · [**Suggest an idea →**](https://github.com/luongnv89/dropfruites/issues/new?template=feature_request.yml) · [**General feedback →**](https://github.com/luongnv89/dropfruites/issues/new?template=feedback.yml) · [**Email**](mailto:luongnv89@gmail.com)
 
 > **Coming soon to the App Store.** Click **Watch → Custom → Releases** at the top of this page to get the App Store link the day it goes live.
-> Website: [luongnv89.github.io/dropfruites](https://luongnv89.github.io/dropfruites/)
+> Website: [luongnv.com/dropfruites](https://luongnv.com/dropfruites/)
 
 ## Reporting a bug
 
@@ -62,6 +62,6 @@ When the App Store listing is live, replace the "Coming soon" badge and the **Ge
 
 ## Credits
 
-Fruit art: Microsoft [Fluent Emoji](https://github.com/microsoft/fluentui-emoji) (MIT). Blessing icons: Lorc and Delapouite, [game-icons.net](https://game-icons.net) (CC BY 3.0). Font: [Fredoka](https://fonts.google.com/specimen/Fredoka) (OFL 1.1). The full table is on the [credits page](https://luongnv89.github.io/dropfruites/credits.html).
+Fruit art: Microsoft [Fluent Emoji](https://github.com/microsoft/fluentui-emoji) (MIT). Blessing icons: Lorc and Delapouite, [game-icons.net](https://game-icons.net) (CC BY 3.0). Font: [Fredoka](https://fonts.google.com/specimen/Fredoka) (OFL 1.1). The full table is on the [credits page](https://luongnv.com/dropfruites/credits.html).
 
 © Fruit Drop. All rights reserved. Third-party assets remain under their own licenses.
