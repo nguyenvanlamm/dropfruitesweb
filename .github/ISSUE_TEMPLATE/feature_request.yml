@@ -1,0 +1,29 @@
+name: Idea / Feature Request
+description: Suggest a blessing, a fruit, a mode, or any improvement
+title: "[Idea]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: What would you like to see in Fruit Drop?
+      placeholder: "A blessing that freezes the lose line for 10 seconds..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: What would it change in a run?
+      description: When would you pick it, and what would you give up for it?
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Sketches, references to other games, links.
+    validations:
+      required: false
