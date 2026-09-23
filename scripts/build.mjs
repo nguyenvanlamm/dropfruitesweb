@@ -61,7 +61,14 @@ const fragments = {
     .join('\n            '),
 };
 
-function jsonLd() {
+function jsonLd(isHome) {
+  const website = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Fruit Drop',
+    url: `${SITE_URL}/`,
+    description: site.description,
+  };
   const game = {
     '@context': 'https://schema.org',
     '@type': 'VideoGame',
@@ -84,7 +91,7 @@ function jsonLd() {
       acceptedAnswer: { '@type': 'Answer', text: q.a.replace(/<[^>]+>/g, '') },
     })),
   };
-  return [game, faqPage]
+  return (isHome ? [website, game, faqPage] : [website])
     .map((o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`)
     .join('\n    ');
 }
@@ -112,7 +119,7 @@ function render(file) {
     issues: site.issues,
     email: site.email,
     robots: is404 ? 'noindex' : 'index, follow',
-    head: meta.jsonld ? jsonLd() : '',
+    head: jsonLd(!!meta.jsonld),
     scripts: (meta.scripts || [])
       .map((s) => `<script type="module" src="${root}${s}?v=${VERSION}"></script>`)
       .join('\n    '),
@@ -157,7 +164,50 @@ ${indexed
 </urlset>
 `,
 );
-writeFileSync(join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+writeFileSync(
+  join(DIST, 'robots.txt'),
+  `# AI crawlers (training + retrieval) — explicitly allowed
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml
+`,
+);
+writeFileSync(
+  join(DIST, 'llms.txt'),
+  `# Fruit Drop
+
+> ${site.description}
+
+Fruit Drop is in development for iPhone. This site is the game's landing page: how it plays, the fruit merge chain, the blessing power-up system, changelog, support, privacy policy, and asset credits.
+
+## Pages
+
+- [Fruit Drop](${SITE_URL}/): Game overview — how it plays, the fruit chain, blessings, and FAQ
+- [Changelog](${SITE_URL}/changelog.html): Release notes by version
+- [Support](${SITE_URL}/support.html): Bug reports, feedback, and contact
+- [Privacy](${SITE_URL}/privacy.html): Data collection policy (none)
+- [Credits](${SITE_URL}/credits.html): Fruit art, icon, and font licenses
+
+## Optional
+
+- [Source code](${site.repo}): GitHub repository
+- [Sitemap](${SITE_URL}/sitemap.xml)
+`,
+);
 writeFileSync(join(DIST, '.nojekyll'), '');
 
 console.log(`Built ${pages.length} pages into dist/ (${SITE_URL}, base ${BASE_PATH})`);
