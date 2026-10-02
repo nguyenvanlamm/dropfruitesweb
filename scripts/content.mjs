@@ -2,13 +2,13 @@
 // (lib/engine/fruit_spec.dart, lib/engine/blessing.dart) — keep them in sync.
 
 export const site = {
-  url: 'https://luongnv.com/dropfruites',
-  basePath: '/dropfruites/',
-  repo: 'https://github.com/luongnv89/dropfruites',
-  issues: 'https://github.com/luongnv89/dropfruites/issues',
-  email: 'luongnv89@gmail.com',
+  url: 'https://fruit-mischief.lamnv.com',
+  basePath: '/',
+  repo: 'https://github.com/nguyenvanlamm/dropfruitesweb',
+  issues: 'https://github.com/nguyenvanlamm/dropfruitesweb/issues',
+  email: 'lamnv260398@gmail.com',
   description:
-    'Fruit Drop is a physics merge game for iPhone with a roguelike twist: match fruits up an 11-tier chain and pick blessings that change every run.',
+    'Fruit Mischief is a physics merge game for iPhone with a roguelike twist: match fruits up an 11-tier chain and pick blessings that change every run.',
 };
 
 const RADII = [3.8, 5.7, 7.7, 10.4, 13.2, 17.8, 21.6, 26.6, 32.4, 37.5, 42.5];
@@ -53,7 +53,7 @@ export const bars = [
 export const faq = [
   {
     q: 'When can I play?',
-    a: 'Fruit Drop is being prepared for the App Store, and there is no release date yet. <a href="https://github.com/luongnv89/dropfruites">Watch the GitHub repo</a> to see the App Store link the day it goes live.',
+    a: 'Fruit Mischief is being prepared for the App Store, and there is no release date yet. <a href="https://github.com/nguyenvanlamm/dropfruitesweb">Watch the GitHub repo</a> to see the App Store link the day it goes live.',
   },
   {
     q: 'Which devices will it run on?',

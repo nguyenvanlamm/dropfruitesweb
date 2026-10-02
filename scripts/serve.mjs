@@ -1,7 +1,7 @@
 // Serves dist/ under the GitHub Pages base path, so local previews catch
 // the same path bugs production would. Missing files get dist/404.html.
 //
-//   npm run build && npm run serve   →  http://localhost:4173/dropfruites/
+//   npm run build && npm run serve   →  http://localhost:4173/
 
 import { createServer } from 'node:http';
 import { existsSync, readFileSync, statSync } from 'node:fs';
@@ -25,7 +25,7 @@ const TYPES = {
 
 createServer((req, res) => {
   const url = decodeURIComponent(new URL(req.url, 'http://x').pathname);
-  if (url === '/' || url + '/' === BASE) {
+  if (url !== BASE && (url === '/' || url + '/' === BASE)) {
     res.writeHead(302, { Location: BASE }).end();
     return;
   }

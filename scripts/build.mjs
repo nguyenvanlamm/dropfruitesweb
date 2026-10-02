@@ -65,14 +65,14 @@ function jsonLd(isHome) {
   const website = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Fruit Drop',
+    name: 'Fruit Mischief',
     url: `${SITE_URL}/`,
     description: site.description,
   };
   const game = {
     '@context': 'https://schema.org',
     '@type': 'VideoGame',
-    name: 'Fruit Drop',
+    name: 'Fruit Mischief',
     description: site.description,
     url: `${SITE_URL}/`,
     image: `${SITE_URL}/og-image.png`,
@@ -188,15 +188,15 @@ Sitemap: ${SITE_URL}/sitemap.xml
 );
 writeFileSync(
   join(DIST, 'llms.txt'),
-  `# Fruit Drop
+  `# Fruit Mischief
 
 > ${site.description}
 
-Fruit Drop is in development for iPhone. This site is the game's landing page: how it plays, the fruit merge chain, the blessing power-up system, changelog, support, privacy policy, and asset credits.
+Fruit Mischief is in development for iPhone. This site is the game's landing page: how it plays, the fruit merge chain, the blessing power-up system, changelog, support, privacy policy, and asset credits.
 
 ## Pages
 
-- [Fruit Drop](${SITE_URL}/): Game overview — how it plays, the fruit chain, blessings, and FAQ
+- [Fruit Mischief](${SITE_URL}/): Game overview — how it plays, the fruit chain, blessings, and FAQ
 - [Changelog](${SITE_URL}/changelog.html): Release notes by version
 - [Support](${SITE_URL}/support.html): Bug reports, feedback, and contact
 - [Privacy](${SITE_URL}/privacy.html): Data collection policy (none)

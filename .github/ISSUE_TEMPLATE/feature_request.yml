@@ -7,7 +7,7 @@ body:
     id: idea
     attributes:
       label: Your idea
-      description: What would you like to see in Fruit Drop?
+      description: What would you like to see in Fruit Mischief?
       placeholder: "A blessing that freezes the lose line for 10 seconds..."
     validations:
       required: true

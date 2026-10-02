@@ -2,7 +2,7 @@
   "name": "dropfruites",
   "private": true,
   "version": "1.0.0",
-  "description": "Landing site for Fruit Drop, a physics merge game with a roguelike twist.",
+  "description": "Landing site for Fruit Mischief, a physics merge game with a roguelike twist.",
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",

@@ -1,24 +1,24 @@
-# Fruit Drop: feedback, support, and the website
+# Fruit Mischief: feedback, support, and the website
 
-<p align="center"><img src="src/static/og-image.png" alt="Fruit Drop: drop fruit, merge up, pick your luck" width="720" /></p>
+<p align="center"><img src="src/static/og-image.png" alt="Fruit Mischief: drop fruit, merge up, pick your luck" width="720" /></p>
 
-This is the public home of **Fruit Drop**, a physics merge game for iPhone with a roguelike twist. Open an issue to report a bug, suggest a blessing, or ask a question. Every issue gets read.
+This is the public home of **Fruit Mischief**, a physics merge game for iPhone with a roguelike twist. Open an issue to report a bug, suggest a blessing, or ask a question. Every issue gets read.
 
-[**Report a bug →**](https://github.com/luongnv89/dropfruites/issues/new?template=bug_report.yml) · [**Suggest an idea →**](https://github.com/luongnv89/dropfruites/issues/new?template=feature_request.yml) · [**General feedback →**](https://github.com/luongnv89/dropfruites/issues/new?template=feedback.yml) · [**Email**](mailto:luongnv89@gmail.com)
+[**Report a bug →**](https://github.com/nguyenvanlamm/dropfruitesweb/issues/new?template=bug_report.yml) · [**Suggest an idea →**](https://github.com/nguyenvanlamm/dropfruitesweb/issues/new?template=feature_request.yml) · [**General feedback →**](https://github.com/nguyenvanlamm/dropfruitesweb/issues/new?template=feedback.yml) · [**Email**](mailto:lamnv260398@gmail.com)
 
 > **Coming soon to the App Store.** Click **Watch → Custom → Releases** at the top of this page to get the App Store link the day it goes live.
-> Website: [luongnv.com/dropfruites](https://luongnv.com/dropfruites/)
+> Website: [fruit-mischief.lamnv.com](https://fruit-mischief.lamnv.com/)
 
 ## Reporting a bug
 
 | Include | Example |
 |---|---|
 | iPhone model and iOS version | iPhone 15, iOS 26.0 |
-| App version | Settings → Apps → Fruit Drop |
+| App version | Settings → Apps → Fruit Mischief |
 | What happened | Two lemons touched but didn't merge |
 | What you did just before | Held Magnet, used Cleaver on a Pear |
 
-A screenshot or short screen recording helps a lot. [Search open issues](https://github.com/luongnv89/dropfruites/issues) first. If yours is already there, add a 👍 or a comment.
+A screenshot or short screen recording helps a lot. [Search open issues](https://github.com/nguyenvanlamm/dropfruitesweb/issues) first. If yours is already there, add a 👍 or a comment.
 
 ---
 
@@ -30,7 +30,7 @@ A static site with no framework and no runtime dependencies. `scripts/build.mjs`
 ```bash
 npm run build     # src/ → dist/ (pages, sitemap.xml, robots.txt, .nojekyll)
 npm run check     # every local href/src and #anchor in dist/ resolves
-npm run serve     # preview at http://localhost:4173/dropfruites/ (same base path as Pages)
+npm run serve     # preview at http://localhost:4173/ (same base path as the live site)
 npm test          # build + check
 ```
 
@@ -62,6 +62,6 @@ When the App Store listing is live, replace the "Coming soon" badge and the **Ge
 
 ## Credits
 
-Fruit art: Microsoft [Fluent Emoji](https://github.com/microsoft/fluentui-emoji) (MIT). Blessing icons: Lorc and Delapouite, [game-icons.net](https://game-icons.net) (CC BY 3.0). Font: [Fredoka](https://fonts.google.com/specimen/Fredoka) (OFL 1.1). The full table is on the [credits page](https://luongnv.com/dropfruites/credits.html).
+Fruit art: Microsoft [Fluent Emoji](https://github.com/microsoft/fluentui-emoji) (MIT). Blessing icons: Lorc and Delapouite, [game-icons.net](https://game-icons.net) (CC BY 3.0). Font: [Fredoka](https://fonts.google.com/specimen/Fredoka) (OFL 1.1). The full table is on the [credits page](https://fruit-mischief.lamnv.com/credits.html).
 
-© Fruit Drop. All rights reserved. Third-party assets remain under their own licenses.
+© Fruit Mischief. All rights reserved. Third-party assets remain under their own licenses.

@@ -1,4 +1,4 @@
-// The playable mini bin in the hero: a pocket version of Fruit Drop.
+// The playable mini bin in the hero: a pocket version of Fruit Mischief.
 // Verlet circles in world units (bin is 100 wide), same fruit ladder,
 // radii and scores as the game. No blessings — that's what the app is for.
 

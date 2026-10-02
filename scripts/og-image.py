@@ -71,7 +71,7 @@ def font(size, weight):
 
 
 d = ImageDraw.Draw(img)
-d.text((80, 250), "Fruit Drop", font=font(104, 700), fill="#fff6e9")
+d.text((80, 256), "Fruit Mischief", font=font(96, 700), fill="#fff6e9")
 d.text((84, 378), "Drop fruit. Merge up.", font=font(46, 600), fill="#e9def5")
 d.text((84, 434), "Pick your luck.", font=font(46, 700), fill="#ffd166")
 pill = "Coming soon to iPhone"

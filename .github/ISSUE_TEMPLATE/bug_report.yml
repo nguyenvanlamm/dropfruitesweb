@@ -1,5 +1,5 @@
 name: Bug Report
-description: Something in Fruit Drop is broken or behaves strangely
+description: Something in Fruit Mischief is broken or behaves strangely
 title: "[Bug]: "
 labels: ["bug"]
 body:
@@ -55,7 +55,7 @@ body:
     id: app-version
     attributes:
       label: App version
-      description: Settings → Apps → Fruit Drop, or the App Store page
+      description: Settings → Apps → Fruit Mischief, or the App Store page
       placeholder: "1.0.0"
     validations:
       required: false
