@@ -16,7 +16,7 @@ This is the public home of **Fruit Mischief**, a balance puzzle for iPhone: two 
 | iPhone model and iOS version | iPhone 15, iOS 26.0 |
 | App version | Settings → Apps → Fruit Mischief |
 | What happened | Two lychees in the same basket touched but didn't merge |
-| What you did just before | Held Magnet, used Cleaver on a Guava |
+| What you did just before | Held Magnet, used Cleaver on a Starfruit |
 
 A screenshot or short screen recording helps a lot. [Search open issues](https://github.com/nguyenvanlamm/dropfruitesweb/issues) first. If yours is already there, add a 👍 or a comment.
 
@@ -42,7 +42,7 @@ Requires Node 20+. Nothing to install.
 | `src/pages/*.html` | Page bodies, each with a `<!--meta {json} -->` header (title, description, path) |
 | `scripts/content.mjs` | Fruit ladder, blessings, FAQ, inline icons |
 | `src/static/assets/img/board.webp` | The hero screenshot, rendered by the game |
-| `src/static/assets/fruits/` | The 11 fruit, rendered from the game's art (`lib/ui/fruit_art.dart`) |
+| `src/static/assets/fruits/` | The 8 fruit, rendered from the game's art (`lib/ui/fruit_art.dart`) |
 | `scripts/og-image.py` | Regenerates `og-image.png` from the game art (needs Pillow) |
 
 Fruit radii, scores, and blessing numbers mirror the game's engine tables. Update `scripts/content.mjs` when they change.

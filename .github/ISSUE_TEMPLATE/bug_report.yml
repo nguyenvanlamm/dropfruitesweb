@@ -24,7 +24,7 @@ body:
       description: What were you doing right before it happened?
       placeholder: |
         1. Held Magnet and Cleaver
-        2. Used Cleaver on a Guava
+        2. Used Cleaver on a Starfruit
         3. ...
     validations:
       required: true

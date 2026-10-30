@@ -11,21 +11,18 @@ export const site = {
     "Fruit Mischief is a balance puzzle for iPhone: carry two baskets on a Vietnamese street vendor's bamboo pole, merge tropical fruit inside each basket, keep the pole level, and pick blessings that change every run.",
 };
 
-const RADII = [3.8, 5.7, 7.7, 10.4, 13.2, 17.8, 21.6, 26.6, 32.4, 37.5, 42.5];
-const size = (tier) => Math.round(30 + (RADII[tier] / 42.5) * 70);
+const RADII = [3.9, 5.1, 6.6, 8.6, 11.2, 14.6, 19.0, 24.7];
+const size = (tier) => Math.round(30 + (RADII[tier] / 24.7) * 70);
 
 export const chain = [
   ['Kumquat', 'kumquat', 0],
-  ['Longan', 'longan', 1],
-  ['Lychee', 'lychee', 3],
-  ['Rambutan', 'rambutan', 6],
-  ['Mangosteen', 'mangosteen', 10],
-  ['Starfruit', 'starfruit', 15],
-  ['Guava', 'guava', 21],
-  ['Dragon fruit', 'dragon_fruit', 28],
-  ['Papaya', 'papaya', 36],
-  ['Jackfruit', 'jackfruit', 45],
-  ['Durian', 'durian', 66],
+  ['Lychee', 'lychee', 2],
+  ['Rambutan', 'rambutan', 5],
+  ['Mangosteen', 'mangosteen', 9],
+  ['Starfruit', 'starfruit', 14],
+  ['Dragon fruit', 'dragon_fruit', 21],
+  ['Jackfruit', 'jackfruit', 30],
+  ['Durian', 'durian', 45],
 ].map(([name, file, pts], tier) => ({ name, file, pts, size: size(tier) }));
 
 export const blessings = [
