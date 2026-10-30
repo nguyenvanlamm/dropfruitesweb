@@ -1,8 +1,8 @@
 # Fruit Mischief: feedback, support, and the website
 
-<p align="center"><img src="src/static/og-image.png" alt="Fruit Mischief: drop fruit, merge up, pick your luck" width="720" /></p>
+<p align="center"><img src="src/static/og-image.png" alt="Fruit Mischief: carry the fruit, keep the balance" width="720" /></p>
 
-This is the public home of **Fruit Mischief**, a physics merge game for iPhone with a roguelike twist. Open an issue to report a bug, suggest a blessing, or ask a question. Every issue gets read.
+This is the public home of **Fruit Mischief**, a balance puzzle for iPhone: two baskets of tropical fruit on a street vendor's bamboo pole, a pole that tips toward the heavier side, and blessings that change every run. Open an issue to report a bug, suggest a blessing, or ask a question. Every issue gets read.
 
 [**Report a bug →**](https://github.com/nguyenvanlamm/dropfruitesweb/issues/new?template=bug_report.yml) · [**Suggest an idea →**](https://github.com/nguyenvanlamm/dropfruitesweb/issues/new?template=feature_request.yml) · [**General feedback →**](https://github.com/nguyenvanlamm/dropfruitesweb/issues/new?template=feedback.yml) · [**Email**](mailto:lamnv260398@gmail.com)
 
@@ -15,8 +15,8 @@ This is the public home of **Fruit Mischief**, a physics merge game for iPhone w
 |---|---|
 | iPhone model and iOS version | iPhone 15, iOS 26.0 |
 | App version | Settings → Apps → Fruit Mischief |
-| What happened | Two lemons touched but didn't merge |
-| What you did just before | Held Magnet, used Cleaver on a Pear |
+| What happened | Two lychees in the same basket touched but didn't merge |
+| What you did just before | Held Magnet, used Cleaver on a Guava |
 
 A screenshot or short screen recording helps a lot. [Search open issues](https://github.com/nguyenvanlamm/dropfruitesweb/issues) first. If yours is already there, add a 👍 or a comment.
 
@@ -40,8 +40,9 @@ Requires Node 20+. Nothing to install.
 |---|---|
 | `src/layout.html` | Shared `<head>`, header, and footer |
 | `src/pages/*.html` | Page bodies, each with a `<!--meta {json} -->` header (title, description, path) |
-| `scripts/content.mjs` | Fruit ladder, blessings, bot balance numbers, FAQ, inline icons |
-| `src/static/assets/js/bin.js` | The playable mini bin in the hero (canvas and Verlet physics) |
+| `scripts/content.mjs` | Fruit ladder, blessings, FAQ, inline icons |
+| `src/static/assets/img/board.webp` | The hero screenshot, rendered by the game |
+| `src/static/assets/fruits/` | The 11 fruit, rendered from the game's art (`lib/ui/fruit_art.dart`) |
 | `scripts/og-image.py` | Regenerates `og-image.png` from the game art (needs Pillow) |
 
 Fruit radii, scores, and blessing numbers mirror the game's engine tables. Update `scripts/content.mjs` when they change.
@@ -62,6 +63,6 @@ When the App Store listing is live, replace the "Coming soon" badge and the **Ge
 
 ## Credits
 
-Fruit art: Microsoft [Fluent Emoji](https://github.com/microsoft/fluentui-emoji) (MIT). Blessing icons: Lorc and Delapouite, [game-icons.net](https://game-icons.net) (CC BY 3.0). Font: [Fredoka](https://fonts.google.com/specimen/Fredoka) (OFL 1.1). The full table is on the [credits page](https://fruit-mischief.lamnv.com/credits.html).
+Fruit, vendor, pole and baskets: original art drawn for the game. Blessing icons: Lorc and Delapouite, [game-icons.net](https://game-icons.net) (CC BY 3.0). Font: [Fredoka](https://fonts.google.com/specimen/Fredoka) (OFL 1.1). The full table is on the [credits page](https://fruit-mischief.lamnv.com/credits.html).
 
 © Fruit Mischief. All rights reserved. Third-party assets remain under their own licenses.

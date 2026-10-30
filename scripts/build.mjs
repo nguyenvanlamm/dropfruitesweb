@@ -10,7 +10,7 @@
 import { cpSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { site, chain, blessings, bars, faq, icons } from './content.mjs';
+import { site, chain, blessings, faq, icons } from './content.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = join(ROOT, 'src');
@@ -40,15 +40,6 @@ const fragments = {
               <p>${b.text}</p>
               <div class="tag"><span>${b.charges ? `${b.charges} uses · +1 every ${b.recharge} merges` : 'Passive'}</span></div>
             </article>`,
-    )
-    .join('\n            '),
-  bars: bars
-    .map(
-      (b) => `<li class="bar${b.base ? ' is-base' : ''}" style="--v:${b.value}">
-              <span class="bar-name">${b.name}</span>
-              <span class="bar-track"><span class="bar-fill"></span></span>
-              <span class="bar-val">${b.value.toFixed(2)}×</span>
-            </li>`,
     )
     .join('\n            '),
   faq: faq
@@ -192,7 +183,7 @@ writeFileSync(
 
 > ${site.description}
 
-Fruit Mischief is in development for iPhone. This site is the game's landing page: how it plays, the fruit merge chain, the blessing power-up system, changelog, support, privacy policy, and asset credits.
+Fruit Mischief is in development for iPhone. This site is the game's landing page: how it plays (two baskets on a balancing pole), the fruit chain, the blessing power-up system, changelog, support, privacy policy, and asset credits.
 
 ## Pages
 

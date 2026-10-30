@@ -13,7 +13,7 @@ body:
     attributes:
       label: What happened?
       description: Describe the bug and what you expected to happen instead.
-      placeholder: "Two lemons touched but didn't merge..."
+      placeholder: "Two lychees in the same basket touched but didn't merge..."
     validations:
       required: true
 
@@ -24,7 +24,7 @@ body:
       description: What were you doing right before it happened?
       placeholder: |
         1. Held Magnet and Cleaver
-        2. Used Cleaver on a Pear
+        2. Used Cleaver on a Guava
         3. ...
     validations:
       required: true

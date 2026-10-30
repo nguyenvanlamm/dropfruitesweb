@@ -23,7 +23,7 @@ if (toggle && links) {
   });
 }
 
-const revealables = document.querySelectorAll('.reveal, .bars');
+const revealables = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(
     (entries) => {

@@ -1,25 +1,25 @@
 <!--meta
 {
-  "title": "Fruit Mischief — Drop fruit. Merge up. Pick your luck.",
-  "description": "Fruit Mischief is a physics merge game for iPhone with a roguelike twist: merge fruits up an 11-tier chain and pick blessings that change every run.",
+  "title": "Fruit Mischief — Carry the fruit. Keep the balance.",
+  "description": "Fruit Mischief is a balance puzzle for iPhone: carry two baskets on a Vietnamese street vendor's bamboo pole, merge tropical fruit inside each basket, keep the pole level, and pick blessings that change every run.",
   "path": "",
-  "scripts": ["assets/js/bin.js"],
   "jsonld": true
 }
 -->
       <section class="hero">
-        <img class="float-fruit" src="assets/fruits/strawberry.png" alt="" width="84" height="84" style="left:4%;top:62%;--r:-12deg" />
-        <img class="float-fruit" src="assets/fruits/lemon.png" alt="" width="64" height="64" style="right:3%;top:4%;--r:14deg;animation-delay:-3s" />
+        <img class="float-fruit" src="assets/fruits/dragon_fruit.png" alt="" width="84" height="84" style="left:4%;top:62%;--r:-12deg" />
+        <img class="float-fruit" src="assets/fruits/starfruit.png" alt="" width="64" height="64" style="right:3%;top:4%;--r:14deg;animation-delay:-3s" />
         <div class="container hero-grid">
           <div class="hero-copy">
             <span class="eyebrow">
-              <img src="assets/fruits/watermelon.png" alt="" width="22" height="22" />
+              <img src="assets/fruits/durian.png" alt="" width="22" height="22" />
               Coming soon to iPhone
             </span>
-            <h1>Drop fruit. Merge up. <span class="accent">Pick&nbsp;your&nbsp;luck.</span></h1>
+            <h1>Carry the fruit. <span class="accent">Keep the&nbsp;balance.</span></h1>
             <p class="lede">
-              Fruit Mischief is a physics merge game with a roguelike twist. Match two fruits to grow them up an 11-tier
-              chain, and every few merges choose a blessing that changes how the run plays.
+              Fruit Mischief puts a Vietnamese street vendor's bamboo pole on your shoulder, with a basket at each end.
+              Every fruit goes left or right, matching fruit merge inside their basket, and the pole tips toward the
+              heavier side. Hold it tipped too long and the whole load spills.
             </p>
             <div class="hero-cta">
               <span class="store-badge" role="img" aria-label="Coming soon to the App Store">
@@ -36,42 +36,22 @@
             <ul class="hero-facts">
               <li>One-finger play</li>
               <li>No account, no tracking</li>
-              <li>11 fruits · 7 blessings</li>
+              <li>2 baskets · 11 fruits · 7 blessings</li>
             </ul>
           </div>
 
-          <div class="bin-stage">
-            <div class="bin-card">
-              <div class="bin-hud" aria-live="off">
-                <div>
-                  <span class="hud-label">Score</span>
-                  <span class="hud-value" data-bin-score>0</span>
-                </div>
-                <div>
-                  <span class="hud-label">Best</span>
-                  <span class="hud-value" data-bin-best>0</span>
-                </div>
-                <div class="hud-next">
-                  <span class="hud-label">Next</span>
-                  <img data-bin-next src="assets/fruits/strawberry.png" alt="Strawberry" width="40" height="40" />
-                </div>
-              </div>
-              <div
-                class="bin-well"
-                data-bin
-                tabindex="0"
-                role="application"
-                aria-label="Playable Fruit Mischief demo. Use left and right arrows to aim, space to drop."
-              >
-                <canvas width="400" height="496"></canvas>
-                <div class="bin-toast" data-bin-toast aria-hidden="true"></div>
-              </div>
+          <figure class="hero-stage">
+            <div class="hero-card">
+              <img
+                class="hero-shot"
+                src="assets/img/board.webp"
+                alt="Fruit Mischief in play: a vendor in a conical hat carries a bamboo pole with a woven basket of tropical fruit hanging from each end."
+                width="780"
+                height="673"
+              />
             </div>
-            <p class="bin-hint">
-              Try it: tap to drop · <kbd>←</kbd> <kbd>→</kbd> <kbd>Space</kbd> ·
-              <button class="bin-reset" type="button" data-bin-reset>Empty the bin</button>
-            </p>
-          </div>
+            <figcaption class="hero-caption">Two baskets, one pole: the side you drop on gets heavier.</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -79,32 +59,32 @@
         <div class="container">
           <div class="section-head reveal">
             <span class="kicker">How it plays</span>
-            <h2>Easy to learn, hard to stop</h2>
-            <p>Every run takes a few minutes. The bin gets tighter with every drop, so every decision counts.</p>
+            <h2>Easy to learn, hard to balance</h2>
+            <p>Every run takes a few minutes. Each drop weighs a merge in one basket against the balance of the whole pole.</p>
           </div>
           <ol class="steps">
             <li class="step reveal">
               <div class="step-art">
-                <img src="assets/fruits/grapes.png" alt="" width="56" height="56" loading="lazy" />
+                <img src="assets/fruits/guava.png" alt="" width="56" height="56" loading="lazy" />
               </div>
-              <h3>Aim and drop</h3>
-              <p>Drag sideways to line up the next fruit, then let go. Physics does the rest: fruit rolls, stacks, and settles.</p>
+              <h3>Pick a basket</h3>
+              <p>Drag over the left or the right basket to aim, then let go. The fruit stays in the basket it falls into.</p>
             </li>
             <li class="step reveal" style="--d: 1">
               <div class="step-art">
-                <img src="assets/fruits/lemon.png" alt="" width="40" height="40" loading="lazy" />
-                <img src="assets/fruits/lemon.png" alt="" width="40" height="40" loading="lazy" />
-                <img src="assets/fruits/tangerine.png" alt="" width="62" height="62" loading="lazy" />
+                <img src="assets/fruits/lychee.png" alt="" width="40" height="40" loading="lazy" />
+                <img src="assets/fruits/lychee.png" alt="" width="40" height="40" loading="lazy" />
+                <img src="assets/fruits/rambutan.png" alt="" width="62" height="62" loading="lazy" />
               </div>
-              <h3>Merge up</h3>
-              <p>Two matching fruits that touch become the next fruit up. Land merges less than half a second apart for a ×1.5 combo.</p>
+              <h3>Merge inside a basket</h3>
+              <p>Two matching fruits in the same basket become the next fruit up. Land merges less than half a second apart for a ×1.5 combo.</p>
             </li>
             <li class="step reveal" style="--d: 2">
               <div class="step-art">
-                <img src="assets/icons/luck.svg" alt="" width="48" height="48" loading="lazy" style="padding:8px;border-radius:14px;background:var(--amber)" />
+                <img src="assets/fruits/durian.png" alt="" width="56" height="56" loading="lazy" />
               </div>
-              <h3>Choose a blessing</h3>
-              <p>At merge six the board freezes and offers three blessings. Pick one, and play on. Keep fruit under the line, or the run ends.</p>
+              <h3>Keep the pole level</h3>
+              <p>The pole tips toward the heavier basket. Past its limit it glows red and arrows point at the lighter side. Leave it tipped for 2.5 seconds and the load spills.</p>
             </li>
           </ol>
         </div>
@@ -114,8 +94,8 @@
         <div class="container">
           <div class="section-head reveal">
             <span class="kicker">The fruit chain</span>
-            <h2>Cherry to Watermelon in 11&nbsp;tiers</h2>
-            <p>Each merge grows the fruit and your score. The watermelon fills almost the whole bin, so making one takes planning.</p>
+            <h2>Kumquat to durian in 11&nbsp;tiers</h2>
+            <p>Eleven tropical fruits, all drawn for this game. Bigger fruit weigh more, so every merge shifts the pole.</p>
           </div>
           <div class="chain-wrap reveal">
             <ol class="chain">
@@ -123,7 +103,7 @@
             </ol>
             <div class="chain-legend">
               <span>Only the <strong>5 smallest</strong> fruits fall from the top.</span>
-              <span>Two watermelons meet? Both vanish for <strong>+200 points</strong>.</span>
+              <span>Two durians in one basket burst for <strong>+200 points</strong> and a bonus blessing pick.</span>
             </div>
           </div>
         </div>
@@ -135,8 +115,9 @@
             <span class="kicker">The roguelike part</span>
             <h2>Seven blessings. Room for three.</h2>
             <p>
-              Each draft deals three blessings at random. When your slots are full, taking a new one means giving one
-              up, so no two runs build the same way.
+              Every run opens with a draft of three blessings, before the first fruit falls, and more drafts follow as
+              you merge. When your slots are full, taking a new one means giving one up, so no two runs build the same
+              way.
             </p>
           </div>
           <div class="blessing-grid">
@@ -151,27 +132,6 @@
       </section>
 
       <section class="section" style="padding-top:0">
-        <div class="container lab">
-          <div class="lab-copy reveal">
-            <span class="kicker">Balanced by bot</span>
-            <h2>Every blessing had to earn its&nbsp;slot</h2>
-            <p>
-              A test bot played 20 runs with each blessing and compared them to runs with none. A blessing that scored
-              worse than no blessing counted as a bug, not a trade-off.
-            </p>
-            <p>
-              The first Lucky Draw dropped bigger fruit. It sounded like a buff, but it filled the bin faster and scored
-              below the baseline. Now it drops fruit you already have on the board, and it helps.
-            </p>
-            <p class="fine">Score multiplier against a no-blessing baseline of 464 points. These are internal bot runs from development, not player data.</p>
-          </div>
-          <ul class="bars reveal" aria-label="Bot score by blessing, relative to no blessing">
-            {{bars}}
-          </ul>
-        </div>
-      </section>
-
-      <section class="section" style="padding-top:0">
         <div class="container">
           <div class="section-head reveal">
             <span class="kicker">What you won't find</span>
@@ -181,7 +141,7 @@
             <div class="promise reveal">
               {{icon:user}}
               <h3>No sign-up</h3>
-              <p>Open the app and start dropping. No account, no login, no email.</p>
+              <p>Open the app and pick up the pole. No account, no login, no email.</p>
             </div>
             <div class="promise reveal" style="--d: 1">
               {{icon:shield}}
@@ -212,9 +172,9 @@
       <section class="section" style="padding-top:0">
         <div class="container">
           <div class="final reveal">
-            <img class="final-fruit" src="assets/fruits/pineapple.png" alt="" width="256" height="256" loading="lazy" style="left:-18px;bottom:-22px;--r:-14deg" />
-            <img class="final-fruit" src="assets/fruits/cherry.png" alt="" width="256" height="256" loading="lazy" style="right:4%;top:10%;width:72px;--r:10deg;animation-delay:-2s" />
-            <h2>Be in the bin on day one</h2>
+            <img class="final-fruit" src="assets/fruits/jackfruit.png" alt="" width="256" height="256" loading="lazy" style="left:-18px;bottom:-22px;--r:-14deg" />
+            <img class="final-fruit" src="assets/fruits/kumquat.png" alt="" width="256" height="256" loading="lazy" style="right:4%;top:10%;width:72px;--r:10deg;animation-delay:-2s" />
+            <h2>Pick up the pole on day one</h2>
             <p>Fruit Mischief is coming to the App Store. Watch the repo and you'll get the link as soon as it's live.</p>
             <div class="hero-cta">
               <a class="btn" href="{{repo}}" rel="noopener">

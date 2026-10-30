@@ -43,20 +43,23 @@ def paste(name, size, xy, angle=0):
     img.alpha_composite(fruit, xy)
 
 
-# A little pile in the right half, biggest at the bottom.
-paste("watermelon", 330, (800, 300), -8)
-paste("melon", 230, (700, 400), 6)
-paste("pineapple", 190, (880, 130), 10)
-paste("tangerine", 120, (730, 250), -12)
-paste("strawberry", 96, (1040, 70), 14)
-paste("grapes", 104, (1060, 250), -6)
-paste("cherry", 78, (660, 120), 8)
-
-icon = Image.open(STATIC / "assets" / "img" / "app-icon-1024.png").convert("RGBA").resize((120, 120), Image.LANCZOS)
+# The app icon in the right half — the vendor, the tipped pole and both
+# baskets — with a few of the chain's fruit around it.
+icon = Image.open(STATIC / "assets" / "img" / "app-icon-1024.png").convert("RGBA").resize((400, 400), Image.LANCZOS)
 mask = Image.new("L", icon.size, 0)
-ImageDraw.Draw(mask).rounded_rectangle((0, 0, 119, 119), radius=28, fill=255)
+ImageDraw.Draw(mask).rounded_rectangle((0, 0, 399, 399), radius=90, fill=255)
 icon.putalpha(mask)
-img.alpha_composite(icon, (80, 96))
+pad = 40
+alpha = Image.new("L", (icon.width + 2 * pad, icon.height + 2 * pad), 0)
+alpha.paste(mask.point(lambda a: a * 0.5), (pad, pad))
+shadow = Image.new("RGBA", alpha.size, (0, 0, 0, 0))
+shadow.putalpha(alpha.filter(ImageFilter.GaussianBlur(18)))
+img.alpha_composite(shadow, (740 - pad, 115 + 20 - pad))
+img.alpha_composite(icon, (740, 115))
+paste("jackfruit", 150, (1040, 430), 10)
+paste("mangosteen", 104, (640, 470), -8)
+paste("lychee", 84, (1080, 40), 12)
+paste("kumquat", 70, (700, 60), -10)
 
 font_path = str(STATIC / "assets" / "fonts" / "fredoka_wdth_wght.ttf")
 
@@ -72,8 +75,8 @@ def font(size, weight):
 
 d = ImageDraw.Draw(img)
 d.text((80, 256), "Fruit Mischief", font=font(96, 700), fill="#fff6e9")
-d.text((84, 378), "Drop fruit. Merge up.", font=font(46, 600), fill="#e9def5")
-d.text((84, 434), "Pick your luck.", font=font(46, 700), fill="#ffd166")
+d.text((84, 378), "Carry the fruit.", font=font(46, 600), fill="#e9def5")
+d.text((84, 434), "Keep the balance.", font=font(46, 700), fill="#ffd166")
 pill = "Coming soon to iPhone"
 pill_font = font(28, 600)
 pw = d.textlength(pill, font=pill_font)

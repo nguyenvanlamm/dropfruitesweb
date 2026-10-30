@@ -8,46 +8,34 @@ export const site = {
   issues: 'https://github.com/nguyenvanlamm/dropfruitesweb/issues',
   email: 'lamnv260398@gmail.com',
   description:
-    'Fruit Mischief is a physics merge game for iPhone with a roguelike twist: match fruits up an 11-tier chain and pick blessings that change every run.',
+    "Fruit Mischief is a balance puzzle for iPhone: carry two baskets on a Vietnamese street vendor's bamboo pole, merge tropical fruit inside each basket, keep the pole level, and pick blessings that change every run.",
 };
 
 const RADII = [3.8, 5.7, 7.7, 10.4, 13.2, 17.8, 21.6, 26.6, 32.4, 37.5, 42.5];
 const size = (tier) => Math.round(30 + (RADII[tier] / 42.5) * 70);
 
 export const chain = [
-  ['Cherry', 'cherry', 0],
-  ['Strawberry', 'strawberry', 1],
-  ['Grapes', 'grapes', 3],
-  ['Lemon', 'lemon', 6],
-  ['Tangerine', 'tangerine', 10],
-  ['Apple', 'red_apple', 15],
-  ['Pear', 'pear', 21],
-  ['Mango', 'mango', 28],
-  ['Pineapple', 'pineapple', 36],
-  ['Melon', 'melon', 45],
-  ['Watermelon', 'watermelon', 66],
+  ['Kumquat', 'kumquat', 0],
+  ['Longan', 'longan', 1],
+  ['Lychee', 'lychee', 3],
+  ['Rambutan', 'rambutan', 6],
+  ['Mangosteen', 'mangosteen', 10],
+  ['Starfruit', 'starfruit', 15],
+  ['Guava', 'guava', 21],
+  ['Dragon fruit', 'dragon_fruit', 28],
+  ['Papaya', 'papaya', 36],
+  ['Jackfruit', 'jackfruit', 45],
+  ['Durian', 'durian', 66],
 ].map(([name, file, pts], tier) => ({ name, file, pts, size: size(tier) }));
 
 export const blessings = [
   { name: 'Magnet', icon: 'magnet', tone: '#ff6b6b', text: 'Matching fruits near each other pull together and merge.' },
-  { name: 'Deep Bin', icon: 'higher_line', tone: '#4ecdc4', text: 'Lowers the lose line, so the bin holds one more layer.' },
+  { name: 'Deep Baskets', icon: 'higher_line', tone: '#4ecdc4', text: 'Raises the lose line, so each basket holds one more layer.' },
   { name: 'Lucky Draw', icon: 'luck', tone: '#8bc34a', text: 'The queue often drops fruit types already on the board.' },
   { name: 'Combo Master', icon: 'combo_master', tone: '#ff9f1c', text: 'Combos last longer and score harder.' },
   { name: 'Cleaver', icon: 'knife', tone: '#b79fd0', text: 'Tap a fruit to split it into two smaller ones.', charges: 3, recharge: 8 },
-  { name: 'Hammer', icon: 'hammer', tone: '#f0b45e', text: 'Tap a fruit to smash it out of the bin.', charges: 2, recharge: 14 },
+  { name: 'Hammer', icon: 'hammer', tone: '#f0b45e', text: 'Tap a fruit to smash it and lighten its basket.', charges: 2, recharge: 14 },
   { name: 'Swap', icon: 'swap', tone: '#5aa9ff', text: 'Trade the fruit in your hand for the next one.', charges: 5, recharge: 4 },
-];
-
-// Bot score relative to the no-blessing baseline (README balance table).
-export const bars = [
-  { name: 'Combo Master', value: 2.08 },
-  { name: 'Deep Bin', value: 1.5 },
-  { name: 'Lucky Draw', value: 1.23 },
-  { name: 'Magnet', value: 1.19 },
-  { name: 'Swap', value: 1.18 },
-  { name: 'Cleaver', value: 1.15 },
-  { name: 'Hammer', value: 1.14 },
-  { name: 'No blessing', value: 1.0, base: true },
 ];
 
 export const faq = [
@@ -64,8 +52,8 @@ export const faq = [
     a: 'Pricing will be announced with the App Store listing. The game includes optional in-app packs that add extra Cleaver, Hammer, and Swap uses. Every run is fully playable without buying anything.',
   },
   {
-    q: 'How is it different from other fruit merge games?',
-    a: 'Blessings. Every few merges the board freezes and you choose one of three power-ups, and you can hold only three at a time. Magnet pulls matches together, Cleaver splits a fruit, Deep Bin buys another layer. Each run ends up playing differently.',
+    q: 'How is it different from other merge games?',
+    a: 'You carry two baskets on a shoulder pole instead of filling one box. Every fruit goes left or right, only fruit in the same basket merge, and the pole tips toward the heavier side, so a big merge on one side needs an answer on the other. Every run also opens with a blessing pick, and you can hold only three.',
   },
   {
     q: 'Do I need an internet connection?',
